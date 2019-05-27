@@ -1,5 +1,19 @@
 package razvoj_softvera_t10;
 
+
+public class Tutorijal{
+
+
+    public static void main(String[] args) {
+
+    }
+}
+
+
+/*
+*
+package razvoj_softvera_t10;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,3 +35,5 @@ public class Tutorijal extends Application {
         launch(args);
     }
 }
+
+* */
