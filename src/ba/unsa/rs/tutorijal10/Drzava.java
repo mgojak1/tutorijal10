@@ -30,6 +30,9 @@ public class Drzava {
         this.jedinica_za_povrsinu = jedinica_za_povrsinu;
     }
 
+    public Drzava() {
+    }
+
     public int getBroj_stanovnika() {
         return broj_stanovnika;
     }

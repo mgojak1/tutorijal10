@@ -11,6 +11,9 @@ public class Grad {
         this.temperature = temperature;
     }
 
+    public Grad() {
+    }
+
     public String getNaziv() {
         return naziv;
     }
