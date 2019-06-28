@@ -1,17 +1,20 @@
 package ba.unsa.rs.tutorijal10;
 
-public class Grad {
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class Grad implements Serializable {
+
     private String naziv;
-    private int broj_stanovnika;
-    private double[] temperature;
+    private Integer brojStanovnika;
+    private ArrayList<Double> temperature;
 
-    public Grad(String naziv, int broj_stanovnika, double[] temperature) {
+    private static final long serialVersionUID = 1L;
+
+    public Grad(String naziv, Integer brojStanovnika, ArrayList<Double> temperature) {
         this.naziv = naziv;
-        this.broj_stanovnika = broj_stanovnika;
+        this.brojStanovnika = brojStanovnika;
         this.temperature = temperature;
-    }
-
-    public Grad() {
     }
 
     public String getNaziv() {
@@ -22,19 +25,28 @@ public class Grad {
         this.naziv = naziv;
     }
 
-    public int getBroj_stanovnika() {
-        return broj_stanovnika;
+    public Integer getBrojStanovnika() {
+        return brojStanovnika;
     }
 
-    public void setBroj_stanovnika(int broj_stanovnika) {
-        this.broj_stanovnika = broj_stanovnika;
+    public void setBrojStanovnika(Integer brojStanovnika) {
+        this.brojStanovnika = brojStanovnika;
     }
 
-    public double[] getTemperature() {
+    public ArrayList<Double> getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(double[] temperature) {
+    public void setTemperature(ArrayList<Double> temperature) {
         this.temperature = temperature;
+    }
+
+    @Override
+    public String toString() {
+        String s = naziv + ", " + brojStanovnika;
+        for (double d: temperature) {
+            s += ", " + d;
+        }
+        return s;
     }
 }
