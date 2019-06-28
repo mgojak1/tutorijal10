@@ -1,17 +1,18 @@
 package ba.unsa.rs.tutorijal10;
 
-public class Drzava {
-    private String naziv, jedinica_za_povrsinu;
-    private int broj_stanovnika;
-    private  double povrsina;
-    private Grad glavni_grad;
+import java.io.Serializable;
 
-    public Drzava(String naziv, String jedinica_za_povrsinu, int broj_stanovnika, double povrsina, Grad glavni_grad) {
-        this.naziv = naziv;
-        this.jedinica_za_povrsinu = jedinica_za_povrsinu;
-        this.broj_stanovnika = broj_stanovnika;
-        this.povrsina = povrsina;
-        this.glavni_grad = glavni_grad;
+public class Drzava implements Serializable {
+    private String naziv;
+    private int brojStanovnika;
+    private double povrsina;
+    private String  jedinicaPovrsine;
+    private Grad glavniGrad;
+
+    private static final long serialVersionUID = 1L;
+
+    public Drzava() {
+
     }
 
     public String getNaziv() {
@@ -22,23 +23,12 @@ public class Drzava {
         this.naziv = naziv;
     }
 
-    public String getJedinica_za_povrsinu() {
-        return jedinica_za_povrsinu;
+    public int getBrojStanovnika() {
+        return brojStanovnika;
     }
 
-    public void setJedinica_za_povrsinu(String jedinica_za_povrsinu) {
-        this.jedinica_za_povrsinu = jedinica_za_povrsinu;
-    }
-
-    public Drzava() {
-    }
-
-    public int getBroj_stanovnika() {
-        return broj_stanovnika;
-    }
-
-    public void setBroj_stanovnika(int broj_stanovnika) {
-        this.broj_stanovnika = broj_stanovnika;
+    public void setBrojStanovnika(int brojStanovnika) {
+        this.brojStanovnika = brojStanovnika;
     }
 
     public double getPovrsina() {
@@ -49,11 +39,19 @@ public class Drzava {
         this.povrsina = povrsina;
     }
 
-    public Grad getGlavni_grad() {
-        return glavni_grad;
+    public String getJedinicaPovrsine() {
+        return jedinicaPovrsine;
     }
 
-    public void setGlavni_grad(Grad glavni_grad) {
-        this.glavni_grad = glavni_grad;
+    public void setJedinicaPovrsine(String jedinicaPovrsine) {
+        this.jedinicaPovrsine = jedinicaPovrsine;
+    }
+
+    public Grad getGlavniGrad() {
+        return glavniGrad;
+    }
+
+    public void setGlavniGrad(Grad glavniGrad) {
+        this.glavniGrad = glavniGrad;
     }
 }
